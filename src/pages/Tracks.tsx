@@ -37,7 +37,7 @@ export default function Tracks(): JSX.Element {
     }
   }, [trackCodeList, trackCode]);
 
-  function handleSave() {
+  const handleSave = () => {
     setIsSaved((prevState) => (!prevState ? true : true));
     setTrackCodeList((prevState: string[]) => handleSetToList(prevState, trackCode));
 
@@ -50,7 +50,7 @@ export default function Tracks(): JSX.Element {
         color: theme.title === 'light' ? '#eee' : '#222',
       });
     }
-  }
+  };
 
   return (
     <Container>

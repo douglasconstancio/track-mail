@@ -11,10 +11,10 @@ export function Footer(): JSX.Element {
         {' '}
         <Link
           target="_blank"
-          to="https://github.com/TiagoBarros01"
+          to="https://github.com/douglasconstancio"
           rel="noreferrer"
         >
-          Tiago Barros
+          Douglas Constancio
         </Link>
       </p>
     </FooterContainer>
