@@ -23,9 +23,9 @@ export default function Homepage(): JSX.Element {
       <Container>
         <Title>
           <h1>
-            Rastreio
+            SemNome
             <span>.</span>
-            fast
+            !
           </h1>
         </Title>
         <CodeContainer>
@@ -33,11 +33,11 @@ export default function Homepage(): JSX.Element {
             type="text"
             ref={valueInputRef}
             maxLength={15}
-            placeholder="Code here"
+            placeholder="Código"
             required
           />
           <button type="button" onClick={() => handleTrack()}>
-            Track order
+            Rastrear
           </button>
         </CodeContainer>
       </Container>

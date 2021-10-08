@@ -13,13 +13,13 @@ export function NavigationWeb(): JSX.Element {
         location={pathname === '/integrations' && true}
         onClick={() => useRoutes('/integrations')}
       >
-        Integrations
+        Integrações
       </List>
       <List
         location={pathname === '/searchcep' && true}
         onClick={() => useRoutes('/searchcep')}
       >
-        Search CEP
+        Buscar CEP
       </List>
     </Container>
   );

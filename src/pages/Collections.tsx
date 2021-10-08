@@ -39,7 +39,7 @@ export default function Collections(): JSX.Element {
   return (
     <Container>
       <Title>
-        <h1>Saved</h1>
+        <h1>Meus 📦💛</h1>
       </Title>
       <ListContainer>
         {trackCodeList.length !== 0 ? (
@@ -56,7 +56,7 @@ export default function Collections(): JSX.Element {
           ))
         ) : (
           <WithoutList>
-            <p>You don&apos;t have any tracks yet</p>
+            <p>Você ainda não tem rastreios salvos</p>
           </WithoutList>
         )}
       </ListContainer>
