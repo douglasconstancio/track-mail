@@ -7,7 +7,7 @@ export function Footer(): JSX.Element {
   return (
     <FooterContainer>
       <p>
-        Created with 💛 by
+        Created by
         {' '}
         <Link
           target="_blank"
