@@ -45,7 +45,8 @@ export const HomeImage = styled.img`
   cursor: pointer;
 
   :hover {
-    transform: translateY(-3px);
+    transform: rotate3d(1, 2.0, 3.0, 20deg);
+    transition: filter 200ms;
   }
 `;
 

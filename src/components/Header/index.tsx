@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { useTheme } from '../../hooks/useTheme';
-import Logo from '../../img/Logo.svg';
+import Logo from '../../img/logo.svg';
 import { useRoutes } from '../../services/useRoutes';
 import { Navigation } from '../Navigation/index';
 import {

@@ -1,7 +1,10 @@
 import React, { useCallback, useRef } from 'react';
 
 import { Footer } from '../components/Footer';
+import { useTheme } from '../hooks/useTheme';
 import { useTrack } from '../hooks/useTrack';
+import HeyYouDark from '../img/heyYouDark.svg';
+import HeyYouLight from '../img/heyYouLight.svg';
 import {
   CodeContainer,
   Input,
@@ -10,6 +13,7 @@ import {
 } from '../styles/pages/Homepage';
 
 export default function Homepage(): JSX.Element {
+  const { theme: { title } } = useTheme();
   const valueInputRef = useRef<HTMLInputElement>(null);
 
   const { getTrackingData } = useTrack();
@@ -22,11 +26,11 @@ export default function Homepage(): JSX.Element {
     <>
       <Container>
         <Title>
-          <h1>
-            SemNome
-            <span>.</span>
-            !
-          </h1>
+          {title === 'light' ? (
+            <img src={HeyYouLight} height="100px" alt="Hey-you" />
+          ) : (
+            <img src={HeyYouDark} height="100px" alt="Hey-you" />
+          )}
         </Title>
         <CodeContainer>
           <Input

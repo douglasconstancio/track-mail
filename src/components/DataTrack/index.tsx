@@ -81,7 +81,7 @@ export function DataTrack({
       </div>
       {moreInfo && (
         <MoreInfoContainer>
-          <h1>SALVEE</h1>
+          <h1>Em Breve 🌟</h1>
         </MoreInfoContainer>
       )}
       <DividerContainer>

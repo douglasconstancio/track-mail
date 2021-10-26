@@ -7,7 +7,7 @@ import { Container } from '../styles/pages/Integrations';
 export default function Integrations(): JSX.Element {
   return (
     <Container>
-      <h1>Integrations</h1>
+      <h1>Integrações</h1>
       <div>
         <img src={CorreiosLogo} alt="correios-logo" />
         <img src={ViacepLogo} alt="correios-logo" />

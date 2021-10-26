@@ -24,7 +24,7 @@ export function NavigationMobile(): JSX.Element {
                 onClick={() => useRoutes('/integrations')}
                 onKeyPress={() => useRoutes('/integrations')}
               >
-                Integrations
+                Integrações
               </button>
             </li>
             <li>
@@ -33,7 +33,7 @@ export function NavigationMobile(): JSX.Element {
                 onClick={() => useRoutes('/searchcep')}
                 onKeyPress={() => useRoutes('/searchcep')}
               >
-                Search CEP
+                Buscar CEP
               </button>
             </li>
           </List>
