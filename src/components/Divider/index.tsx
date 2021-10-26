@@ -9,10 +9,8 @@ type DividerProps = {
   width?: string;
 };
 
-export function Divider({
+export const Divider = ({
   bgColor,
   height = '2px',
   width = '100',
-}: DividerProps): JSX.Element {
-  return <Container bgColor={bgColor} height={height} width={width} />;
-}
+}: DividerProps): JSX.Element => <Container bgColor={bgColor} height={height} width={width} />;

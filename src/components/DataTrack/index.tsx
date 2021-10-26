@@ -5,24 +5,24 @@ import { v4 } from 'uuid';
 import { UnityTrack } from '../../@types/DataProps';
 import { Divider } from '../Divider';
 import {
+  City,
   Container,
   DateHour,
-  Posted,
   Delivered,
-  Transit,
-  State,
-  City,
   Description,
-  Info,
   Details,
-  MoreInfo,
   DividerContainer,
+  Info,
+  MoreInfo,
   MoreInfoContainer,
+  Posted,
+  State,
+  Transit,
 } from './style';
 
-export function DataTrack({
+export const DataTrack = ({
   data, hora, descricao, unidade: { cidade, uf }, length,
-}: UnityTrack): JSX.Element {
+}: UnityTrack): JSX.Element => {
   const [moreInfo, setMoreInfo] = useState<boolean>(false);
 
   return (
@@ -89,4 +89,4 @@ export function DataTrack({
       </DividerContainer>
     </Container>
   );
-}
+};

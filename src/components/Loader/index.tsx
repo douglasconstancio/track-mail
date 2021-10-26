@@ -1,13 +1,15 @@
 import React from 'react';
 
-import { Spinner, LoaderContainer, Container } from './style';
+import {
+  Container,
+  LoaderContainer,
+  Spinner,
+} from './style';
 
-export function Loader(): JSX.Element {
-  return (
-    <Container>
-      <LoaderContainer>
-        <Spinner />
-      </LoaderContainer>
-    </Container>
+export const Loader = (): JSX.Element => (
+  <Container>
+    <LoaderContainer>
+      <Spinner />
+    </LoaderContainer>
+  </Container>
   );
-}

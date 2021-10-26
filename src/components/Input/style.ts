@@ -18,6 +18,9 @@ export const Input = styled(InputMask)`
     border-radius: 10px;
   }
 
+  border: 3px solid ${({ theme }) => theme.colors.background};
+  transition-duration: 400ms;
+
   :focus {
     border: 3px solid ${({ theme }) => theme.colors.yellow};
   }

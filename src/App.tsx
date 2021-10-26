@@ -9,18 +9,16 @@ import Routes from './routes';
 import History from './services/history';
 import GlobalStyle from './styles/global';
 
-function App(): JSX.Element {
-  return (
-    <ContextProvider>
-      <Router history={History}>
-        <Header />
-        <CollectionIcon />
-        <Routes />
-        <Toaster />
-      </Router>
-      <GlobalStyle />
-    </ContextProvider>
+const App = (): JSX.Element => (
+  <ContextProvider>
+    <Router history={History}>
+      <Header />
+      <CollectionIcon />
+      <Routes />
+      <Toaster />
+    </Router>
+    <GlobalStyle />
+  </ContextProvider>
   );
-}
 
 export default App;

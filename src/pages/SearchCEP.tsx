@@ -18,21 +18,20 @@ type DataProps = {
   localidade: string;
   logradouro: string;
   uf: string;
-
   erro?: boolean;
 };
 
-export default function SearchCEP(): JSX.Element {
+export const SearchCEP = (): JSX.Element => {
   const { theme } = useTheme();
 
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [CEPData, setCEPData] = useState<DataCEPProps | null>(null);
   const [CEPCode, setCEPCode] = useState<string>('');
 
-  async function handleSearchCEP(cep: string): Promise<void> {
+  const handleSearchCEP = async (cep: string) => {
     if (CEPCode.length !== 8) {
       useToast({
-        message: 'Fill the field(s)!',
+        message: 'Preencha o campo corretamente! 👀',
         type: 'error',
         background: theme.title === 'light' ? '#353230' : '#ddd',
         color: theme.title === 'light' ? '#eee' : '#222',
@@ -45,11 +44,9 @@ export default function SearchCEP(): JSX.Element {
     try {
       const { data } = await cepAPI.get<DataProps>(`${cep}/json/`);
 
-      console.log(data.erro);
-
       if (data.erro) {
         useToast({
-          message: 'Invalid CEP',
+          message: 'CEP inválido',
           type: 'error',
           background: theme.title === 'light' ? '#353230' : '#ddd',
           color: theme.title === 'light' ? '#eee' : '#222',
@@ -70,10 +67,9 @@ export default function SearchCEP(): JSX.Element {
 
       setIsLoading(false);
     } catch (error) {
-      console.debug(error);
       setIsLoading(false);
     }
-  }
+  };
 
   return (
     <Container>
@@ -110,4 +106,6 @@ export default function SearchCEP(): JSX.Element {
       )}
     </Container>
   );
-}
+};
+
+export default SearchCEP;

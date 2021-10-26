@@ -19,7 +19,7 @@ const TrackingContext = createContext<TrackingContextData>(
   {} as TrackingContextData,
 );
 
-function TrackingProvider({ children }: TrackingProviderProps): JSX.Element {
+const TrackingProvider = ({ children }: TrackingProviderProps): JSX.Element => {
   const [dataTrack, setDataTrack] = useState<string[] | null | JSX.Element[][]>(
     null,
   );
@@ -82,9 +82,7 @@ function TrackingProvider({ children }: TrackingProviderProps): JSX.Element {
       setDataTrack(data.objeto.map(({ categoria }) => categoria));
       useRoutes('/error');
 
-      setTimeout(() => {
-        useRoutes('/');
-      }, 6000);
+      setTimeout(() => { useRoutes('/'); }, 6000);
     }
   }, []);
 
@@ -116,6 +114,6 @@ function TrackingProvider({ children }: TrackingProviderProps): JSX.Element {
       {children}
     </TrackingContext.Provider>
   );
-}
+};
 
 export { TrackingContext, TrackingProvider };

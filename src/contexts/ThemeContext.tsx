@@ -18,7 +18,7 @@ const ThemeContext = createContext<ThemeContextData>({
   },
 });
 
-function ThemeContextProvider({ children }: ThemeProviderProps): JSX.Element {
+const ThemeContextProvider = ({ children }: ThemeProviderProps): JSX.Element => {
   const [theme, setTheme] = usePersistedState<DefaultTheme>(
     '@Rastreio.fast:theme',
     dark,
@@ -47,6 +47,6 @@ function ThemeContextProvider({ children }: ThemeProviderProps): JSX.Element {
       <ThemeProvider theme={theme}>{children}</ThemeProvider>
     </ThemeContext.Provider>
   );
-}
+};
 
 export { ThemeContext, ThemeContextProvider };

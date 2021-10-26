@@ -6,11 +6,11 @@ import {
   Details,
   Info,
   Loading,
-  PointContainer,
   Point,
+  PointContainer,
 } from '../styles/pages/Error';
 
-export default function Error(): JSX.Element {
+export const Error = (): JSX.Element => {
   const { dataTrack } = useTrack();
 
   return (
@@ -18,12 +18,12 @@ export default function Error(): JSX.Element {
       <Details>
         <h1>
           <span>Ops..! </span>
-          Something of wrong isn&apos;t right 😞
+          Algo de errado aconteceu 😞
         </h1>
         <p>{dataTrack}</p>
       </Details>
       <Info>
-        <p>We redirect you to the main page, don&apos;t worry</p>
+        <p>Nós redirecionamos você para a página principal, não se preocupe</p>
         <Loading>
           <PointContainer>
             <Point position="first" />
@@ -34,4 +34,6 @@ export default function Error(): JSX.Element {
       </Info>
     </Container>
   );
-}
+};
+
+export default Error;

@@ -5,12 +5,14 @@ import {
  Container, StackIcon, ListContainer, List,
 } from './style';
 
-export function NavigationMobile(): JSX.Element {
+export const NavigationMobile = (): JSX.Element => {
   const [isVisible, setIsVisible] = useState<boolean>(false);
 
-  function handleVisibility() {
-    setIsVisible((prevState) => !prevState);
-  }
+  const handleVisibility = () => setIsVisible((prevState) => !prevState);
+
+  const renderIntegrations = () => useRoutes('/integrations');
+
+  const renderSearchCEP = () => useRoutes('/searchcep');
 
   return (
     <Container onClick={() => handleVisibility()}>
@@ -21,8 +23,8 @@ export function NavigationMobile(): JSX.Element {
             <li>
               <button
                 type="button"
-                onClick={() => useRoutes('/integrations')}
-                onKeyPress={() => useRoutes('/integrations')}
+                onClick={renderIntegrations}
+                onKeyPress={renderIntegrations}
               >
                 Integrações
               </button>
@@ -30,8 +32,8 @@ export function NavigationMobile(): JSX.Element {
             <li>
               <button
                 type="button"
-                onClick={() => useRoutes('/searchcep')}
-                onKeyPress={() => useRoutes('/searchcep')}
+                onClick={renderSearchCEP}
+                onKeyPress={renderSearchCEP}
               >
                 Buscar CEP
               </button>
@@ -41,4 +43,4 @@ export function NavigationMobile(): JSX.Element {
       )}
     </Container>
   );
-}
+};

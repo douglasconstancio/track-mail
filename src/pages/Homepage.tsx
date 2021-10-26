@@ -7,12 +7,12 @@ import HeyYouDark from '../img/heyYouDark.svg';
 import HeyYouLight from '../img/heyYouLight.svg';
 import {
   CodeContainer,
+  Container,
   Input,
   Title,
-  Container,
 } from '../styles/pages/Homepage';
 
-export default function Homepage(): JSX.Element {
+export const Homepage = (): JSX.Element => {
   const { theme: { title } } = useTheme();
   const valueInputRef = useRef<HTMLInputElement>(null);
 
@@ -26,11 +26,11 @@ export default function Homepage(): JSX.Element {
     <>
       <Container>
         <Title>
-          {title === 'light' ? (
-            <img src={HeyYouLight} height="100px" alt="Hey-you" />
-          ) : (
-            <img src={HeyYouDark} height="100px" alt="Hey-you" />
-          )}
+          <img
+            src={title === 'light' ? HeyYouLight : HeyYouDark}
+            height="100px"
+            alt="Hey-you"
+          />
         </Title>
         <CodeContainer>
           <Input
@@ -48,4 +48,6 @@ export default function Homepage(): JSX.Element {
       <Footer />
     </>
   );
-}
+};
+
+export default Homepage;

@@ -7,12 +7,10 @@ interface ContextProviderProps {
   children: React.ReactNode;
 }
 
-function ContextProvider({ children }: ContextProviderProps): JSX.Element {
-  return (
-    <ThemeContextProvider>
-      <TrackingProvider>{children}</TrackingProvider>
-    </ThemeContextProvider>
+const ContextProvider = ({ children }: ContextProviderProps): JSX.Element => (
+  <ThemeContextProvider>
+    <TrackingProvider>{children}</TrackingProvider>
+  </ThemeContextProvider>
   );
-}
 
 export default ContextProvider;

@@ -70,10 +70,12 @@ export const Input = styled.input`
   color: ${({ theme }) => theme.colors.text};
 
   border-radius: 5px 0 0 5px;
+  border: 3px solid ${({ theme }) => theme.colors.background};
 
   outline: 0;
 
   transition: border 100ms;
+  transition-duration: 400ms;
 
   :focus {
     border: 3px solid ${({ theme }) => theme.colors.yellow};

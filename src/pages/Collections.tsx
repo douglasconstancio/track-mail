@@ -5,36 +5,33 @@ import { useTheme } from '../hooks/useTheme';
 import { useTrack } from '../hooks/useTrack';
 import {
   Container,
-  Title,
   ListContainer,
+  Title,
   TrashIcon,
   WithoutList,
 } from '../styles/pages/Collections';
 import { useToast } from '../utils/useToast';
 
-export default function Collections(): JSX.Element {
+export const Collections = (): JSX.Element => {
   const { trackCodeList, getTrackingData, setTrackCodeList } = useTrack();
   const { theme } = useTheme();
 
   const handleTrack = useCallback(
-    (code: string) => {
-      getTrackingData(code);
-    },
-    [getTrackingData],
+    (code: string) => { getTrackingData(code); }, [getTrackingData],
   );
 
-  function handleRemoveTrack(index: number) {
+  const handleRemoveTrack = (index: number) => {
     trackCodeList.splice(index, 1);
     setTrackCodeList((prevState) => [...prevState]);
     useToast({
-      message: 'Removes from collection',
+      message: 'Removido dos itens',
       type: 'error',
       icon: '🗑️',
       duration: 2500,
       background: theme.title === 'light' ? '#353230' : '#ddd',
       color: theme.title === 'light' ? '#eee' : '#222',
     });
-  }
+  };
 
   return (
     <Container>
@@ -62,4 +59,6 @@ export default function Collections(): JSX.Element {
       </ListContainer>
     </Container>
   );
-}
+};
+
+export default Collections;

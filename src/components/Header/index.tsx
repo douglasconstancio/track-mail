@@ -14,12 +14,8 @@ import {
   ToggleTheme,
 } from './style';
 
-export function Header(): JSX.Element {
-  const {
-    theme: { title },
-    toggleTheme,
-  } = useTheme(); // ThemeContext
-
+export const Header = (): JSX.Element => {
+  const { theme: { title }, toggleTheme } = useTheme();
   return (
     <HeaderContainer>
       <HeaderContent>
@@ -39,4 +35,4 @@ export function Header(): JSX.Element {
       </HeaderContent>
     </HeaderContainer>
   );
-}
+};
