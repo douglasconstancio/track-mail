@@ -42,6 +42,10 @@ export const CodeContainer = styled.div`
     align-items: center;
     flex-direction: column;
   }
+
+  button {
+    transition-duration: 600ms;
+  };
 `;
 
 export const Title = styled.div`

@@ -17,23 +17,23 @@ export const DataCEP = ({
       <p>{cep}</p>
     </div>
     <div>
-      <strong>UF:</strong>
+      <strong>Estado:</strong>
       <p>{fu}</p>
     </div>
     <div>
-      <strong>STREET/AVENUE:</strong>
+      <strong>Rua/ Avenida:</strong>
       <p>{street}</p>
     </div>
     <div>
-      <strong>COMPLEMENT:</strong>
-      <p>{complement || '" "'}</p>
+      <strong>Complemento:</strong>
+      <p>{complement || ' - '}</p>
     </div>
     <div>
-      <strong>LOCALE:</strong>
+      <strong>Município:</strong>
       <p>{locale}</p>
     </div>
     <div>
-      <strong>NEIGHBORHOOD:</strong>
+      <strong>Bairro:</strong>
       <p>{neighborhood}</p>
     </div>
   </Container>

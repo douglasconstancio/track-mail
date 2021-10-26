@@ -14,6 +14,14 @@ export const Footer = (): JSX.Element => (
       >
         Douglas Constancio
       </a>
+      {' & '}
+      <a
+        target="_blank"
+        href="https://www.linkedin.com/in/elaine-cristina-constancio-375011144/"
+        rel="noreferrer"
+      >
+        Nane
+      </a>
       {' '}
       🌟
     </p>

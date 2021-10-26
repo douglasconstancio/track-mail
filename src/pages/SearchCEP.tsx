@@ -88,7 +88,7 @@ export const SearchCEP = (): JSX.Element => {
               required
             />
             <button type="button" onClick={() => handleSearchCEP(CEPCode)}>
-              Search
+              Buscar
             </button>
           </CEPContainer>
         </>
